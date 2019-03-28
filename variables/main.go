@@ -11,7 +11,7 @@ var (
 
 func main() {
 	// Concept of shadowing
-	fmt.Printf("From gloabal variable: %v, %T \n", i, i)
+	fmt.Printf("From global variable: %v, %T \n", i, i)
 	var i int = 40
 	fmt.Printf("From local scope: %v, %T \n", i, i)
 	var j float32

@@ -4,7 +4,6 @@ import "fmt"
 
 func main() {
 	fmt.Println("Arrays")
-	// array
 	var nums [2]int32
 	nums[0] = 0
 	nums[1] = 2
@@ -19,4 +18,13 @@ func main() {
 	for _, values := range name {
 		fmt.Println(values)
 	}
+	//2-D array
+	var identityMatrix = [3][3]int{[3]int{1, 0, 0}, [3]int{0, 1, 0}, [3]int{0, 0, 1}}
+	fmt.Println("\n", identityMatrix)
+	var identityMatrix2 [3][3]int
+	identityMatrix2[0] = [3]int{1, 0, 0}
+	identityMatrix2[1] = [3]int{0, 1, 0}
+	identityMatrix2[2] = [3]int{0, 0, 1}
+	fmt.Println("\n", identityMatrix2)
+
 }
