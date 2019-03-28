@@ -26,5 +26,13 @@ func main() {
 	identityMatrix2[1] = [3]int{0, 1, 0}
 	identityMatrix2[2] = [3]int{0, 0, 1}
 	fmt.Println("\n", identityMatrix2)
-
+	// Slices
+	slice := make([]int, 3)
+	fmt.Println(slice)
+	fmt.Printf("Length is %v and capcity is %v", len(slice), cap(slice))
+	num := []int{1, 2, 3, 4, 5}
+	fmt.Println(num)
+	num2 := append(num[:2], num[3:]...) // Removing middle element from a slice
+	fmt.Println(num2)
+	fmt.Println(num)
 }
