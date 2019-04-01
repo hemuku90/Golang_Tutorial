@@ -27,6 +27,7 @@ func foo(h human) {
 }
 
 func main() {
+	// Ploymorphism
 	p1 := person{
 		first:  "James",
 		last:   "Bond",
