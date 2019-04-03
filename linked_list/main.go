@@ -9,7 +9,7 @@ type List struct {
 type Node struct {
 	// Node will hold a value and reference to the next node
 	value int   // Node will hold a value
-	next  *Node // Reference to next node
+	next  *Node // Pointer to next node
 }
 
 func (l *List) First() *Node {
@@ -30,6 +30,7 @@ func (n *Node) Next() *Node {
 
 func main() {
 	l := &List{}
+	fmt.Println(*l)
 	l.Push(1)
 	l.Push(2)
 	l.Push(3)

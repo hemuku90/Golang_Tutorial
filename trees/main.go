@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type Node struct {
 	Value int
@@ -9,12 +11,18 @@ type Node struct {
 }
 
 func printNode(n *Node) {
-	fmt.Print("Value: ", n.Value)
-	if n.Left != nil {
-		fmt.Print("  Left=", n.Left.Value)
+	fmt.Print("Value:", n.Value)
+	if n.Left == nil {
+		fmt.Print(" Left=NIL")
 	}
-	if n.Right != nil {
-		fmt.Print("  Right=", n.Right.Value)
+	if n.Right == nil {
+		fmt.Print(" Right=NIL")
+	}
+	if n.Left != nil { // Printing Left node
+		fmt.Print(" Left=", n.Left.Value)
+	}
+	if n.Right != nil { // Printing right node
+		fmt.Print(" Right=", n.Right.Value)
 	}
 	fmt.Println()
 }
