@@ -19,7 +19,7 @@ func (s *stack) peek() int {
 
 // Pop items from top of the stack and return it
 func (s *stack) pop() int {
-	var ret = s.peek()
+	var ret int = s.peek()
 	s.slice = s.slice[0 : len(s.slice)-1]
 	return ret
 }
@@ -29,11 +29,11 @@ func main() {
 	s.push(2)
 	s.push(3)
 	fmt.Println(*s)
-	//fmt.Println(s.peek())
-	fmt.Println(s.pop())
-	fmt.Println(s.pop())
-	fmt.Println(s.pop())
-	fmt.Println(s.pop())
-	fmt.Println(s.pop())
-	fmt.Println(s.pop())
+	s.pop()
+	s.pop()
+	s.pop()
+	s.pop()
+	s.pop()
+	s.pop()
+	fmt.Println(*s)
 }

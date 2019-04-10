@@ -20,7 +20,7 @@ func main() {
 	personList = addNodeEnd(george, personList)
 	printList(personList)
 	p := reverseRecurrsive(personList)
-	fmt.Println(p)
+	fmt.Println("Reverse:", p)
 }
 
 // Printing the linked list
