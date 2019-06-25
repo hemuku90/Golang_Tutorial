@@ -19,14 +19,14 @@ func main() {
 	personList = addNodeEnd(marshall, personList)
 	personList = addNodeEnd(george, personList)
 	printList(personList)
-	p := reverseRecurrsive(personList)
-	fmt.Println(p)
+	//p := reverseRecurrsive(personList)
+	//fmt.Println(p)
 }
 
 // Printing the linked list
 func printList(personList *person) {
 	p := personList
-	fmt.Println("Personlist", p)
+	//fmt.Println("Personlist", p)
 	for ; p != nil; p = p.next {
 		fmt.Println(p)
 	}

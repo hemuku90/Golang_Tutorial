@@ -7,8 +7,11 @@ import (
 
 func main() {
 	d := Circle{radius: 5}
+	fmt.Println("Circle object:")
 	measure(d)
-
+	r := Rectangle{length: 10, width: 10}
+	fmt.Println(("Rectangle object:"))
+	measure(r)
 }
 
 type Geometry interface {
@@ -17,6 +20,19 @@ type Geometry interface {
 }
 type Circle struct {
 	radius float64
+}
+
+type Rectangle struct {
+	length float64
+	width  float64
+}
+
+func (r Rectangle) perimeter() float64 {
+	return 2 * (r.length + r.width)
+}
+
+func (r Rectangle) area() float64 {
+	return r.length * r.width
 }
 
 func (c Circle) area() float64 {

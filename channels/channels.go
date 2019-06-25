@@ -8,11 +8,11 @@ import (
 var wg = sync.WaitGroup{}
 
 func main() {
-	ch1 := make(chan int)
+	ch1 := make(chan int) // Unbuffered channel
 	for j := 1; j < 5; j++ {
 		wg.Add(2)
 		go func() {
-			i := <-ch1 // Recieving data from channel
+			i := <-ch1 // Recieve data from channel
 			fmt.Println(i)
 			wg.Done()
 		}()

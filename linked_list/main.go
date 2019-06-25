@@ -6,6 +6,7 @@ type List struct {
 	head *Node
 	tail *Node
 }
+
 type Node struct {
 	// Node will hold a value and reference to the next node
 	value int   // Node will hold a value
@@ -24,13 +25,14 @@ func (l *List) Push(value int) {
 	}
 	l.tail = node
 }
+
 func (n *Node) Next() *Node {
 	return n.next
 }
 
 func main() {
 	l := &List{}
-	fmt.Println(*l)
+	fmt.Println(*l) //Empty list
 	l.Push(1)
 	l.Push(2)
 	l.Push(3)

@@ -2,19 +2,26 @@ package main
 
 import "fmt"
 
+type Vertex struct {
+	X int
+	Y int
+}
+
+func (v *Vertex) test() {
+	fmt.Println("Hello")
+	fmt.Println(v.X, v.Y)
+}
+
+func (v Vertex) test2() {
+	fmt.Println("Hello")
+}
 func main() {
-	fmt.Println("Pointers")
-	var a = 44
-	var b = &a
-	fmt.Println(a, *b, b, &a)
-	a = 27
-	fmt.Println(a, *b, b, &a)
-	*b = 17 + *b
-	fmt.Println(a, *b, b, &a)
-	arr := []int32{1, 2, 3}
-	arr0 := &arr[0]
-	arr1 := &arr[1]
-	arr2 := &arr[2]
-	fmt.Printf("%p-%p-%p \n", arr0, arr1, arr2)
-	fmt.Printf("Array values are:%v-%v-%v\n", *arr0, *arr1, *arr2)
+	v := Vertex{1, 2}
+	p := &v
+	p.test()
+	fmt.Println(v, p)
+	f := v
+	f.X = 3
+	fmt.Println(f.X)
+
 }

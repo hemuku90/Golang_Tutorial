@@ -28,11 +28,16 @@ func main() {
 	fmt.Println("\n", identityMatrix2)
 	// Slices
 	slice := make([]int, 3)
-	fmt.Println(slice)
-	fmt.Printf("Length is %v and capcity is %v", len(slice), cap(slice))
+	fmt.Printf("Slice %v", slice)
+	fmt.Printf("Length is %v and capcity is %v\n", len(slice), cap(slice))
 	num := []int{1, 2, 3, 4, 5}
 	fmt.Println(num)
 	num2 := append(num[:2], num[3:]...) // Removing middle element from a slice
 	fmt.Println(num2)
 	fmt.Println(num)
+	// Pointer  to slice
+	type num3 []int
+	num3={1,2}
+	var ptr *num3
+	fmt.Println("Pointer\n", ptr)
 }

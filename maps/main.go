@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func test() {
 	//fmt.Println("Map")
 	var nameMap = make(map[int]string) // to create a map use make
 	nameMap[1] = "Hemant"
